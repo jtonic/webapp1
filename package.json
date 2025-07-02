@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "open index.html",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write \"./**/*.{js,html,json,md}\""
@@ -16,6 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^9.30.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "jest": "^29.0.0",
+    "chai": "^5.0.0"
   }
 }

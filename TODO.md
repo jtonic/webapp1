@@ -1,8 +1,8 @@
 # TODO
 
 1. [x] configuration for testing and assertions (jest & chai)
-2. [ ] typescript configuration
-3. [ ] a simple test with TS
+2. [x] typescript configuration
+3. [x] a simple test with TS
 4. [ ] 2 modules and usages from one to the other
    1. [ ] JS & JS
    2. [ ] JS & TS

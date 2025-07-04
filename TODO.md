@@ -16,6 +16,7 @@
 10. [ ] Ajax (HTTP) modern library and API
 11. [ ] validation
 12. [ ] codebase split in two separate projects
-13. [ ] ADO pipeline configuration for project:
+13. ADO pipeline configuration for project:
     1. [ ] lib
     2. [ ] Web App
+14. [ ] storybook

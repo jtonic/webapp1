@@ -5,8 +5,8 @@
 3. [x] a simple test with TS
 4. 2 modules and usages from one to the other
    1. [x] JS & JS
-   2. [ ] JS & TS
-   3. [ ] TS & TS
+   2. [ ] JS imported in TS
+   3. [x] TS imported in JS
    4. [x] references from src in test
 5. [ ] server application
 6. [ ] bundle the application (build)

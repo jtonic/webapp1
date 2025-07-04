@@ -14,5 +14,6 @@ export default {
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^chai$': 'chai/chai.js',
+    '^utils$': '<rootDir>/src/utils.js',
   },
 };

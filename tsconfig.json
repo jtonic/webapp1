@@ -8,9 +8,12 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "allowJs": true
   },
-  "include": ["src", "test"],
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
   "exclude": ["node_modules", "dist"]
 }

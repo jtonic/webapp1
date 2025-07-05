@@ -29,3 +29,4 @@
 21. [ ] Cookies and Local storage (in browser)
 22. [ ] Server implementation in node
 23. [ ] Proxy to use mocking or a locally run backend server
+24. [ ] Testing with Playright

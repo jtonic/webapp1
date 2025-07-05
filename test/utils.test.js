@@ -1,4 +1,3 @@
-// import { expect } from 'chai';
 import multiply from 'utils.js';
 import defaultProfile from 'helpers.ts';
 

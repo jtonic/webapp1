@@ -1,20 +1,11 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { getPersonBySsn } from '../persons';
+import { personFinderStyles } from './person-finder.style';
 
 @customElement('person-finder')
 export class PersonFinder extends LitElement {
-  static readonly styles = css`
-    :host {
-      display: block;
-      border: 1px solid #ccc;
-      padding: 16px;
-      border-radius: 8px;
-    }
-    input {
-      margin-right: 8px;
-    }
-  `;
+  static readonly styles = personFinderStyles;
 
   @property({ type: String })
   private ssn: string = '';
@@ -45,7 +36,7 @@ export class PersonFinder extends LitElement {
           type="text"
           .value=${this.ssn}
           @input=${this._handleInput}
-          placeholder="Enter SSN (e.g., 111-222-3333)"
+          placeholder="Enter SSN (e.g., 111-22-333)"
         />
         <button @click=${this._findPerson}>Find Person</button>
       </div>

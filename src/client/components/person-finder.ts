@@ -1,11 +1,11 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { getPersonBySsn } from '../persons';
-import { personFinderStyles } from './person-finder.style';
+import styles from './person-finder.style.css';
 
 @customElement('person-finder')
 export class PersonFinder extends LitElement {
-  static readonly styles = personFinderStyles;
+  static readonly styles = css`${unsafeCSS(styles)}`;
 
   @property({ type: String })
   private ssn: string = '';

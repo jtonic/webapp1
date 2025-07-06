@@ -1,11 +1,14 @@
 import express from 'express';
 import { findPersonBySsn } from './persons.js';
 import { components } from 'types/persons';
+import cors from 'cors';
 
 type Person = components['schemas']['Person'];
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
+
+app.use(cors());
 
 app.get('/persons/:ssn', (req, res) => {
   const { ssn } = req.params;

@@ -16,7 +16,7 @@
 10. [ ] web components simple configuration
 11. [ ] storybook
 12. Ajax (HTTP) modern library and API
-    1. [ ] Fetch API and Axios
+    1. [x] Fetch API and Axios
     2. [x] Generate types from OpenAPI
 13. [x] Server implementation in node
 14. [ ] validation

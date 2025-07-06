@@ -17,7 +17,7 @@ export class PersonFinder extends LitElement {
   `;
 
   @property({ type: String })
-  ssn?: string;
+  private ssn: string = '';
 
   private _handleInput(e: Event) {
     const input = e.target as HTMLInputElement;

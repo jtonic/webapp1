@@ -18,7 +18,7 @@
 12. Ajax (HTTP) modern library and API
     1. [ ] Fetch API and Axios
     2. [x] Generate types from OpenAPI
-13. [ ] Server implementation in node
+13. [x] Server implementation in node
 14. [ ] validation
 15. [ ] codebase split in two separate projects
 16. ADO pipeline configuration for project:

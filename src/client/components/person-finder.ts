@@ -10,6 +10,12 @@ export class PersonFinder extends LitElement {
   @property({ type: String })
   private ssn: string = '';
 
+  @property({ type: Object })
+  private person: { name: string; ssn: string } | null = null;
+
+  @property({ type: String })
+  private error: string | null = null;
+
   private _handleInput(e: Event) {
     const input = e.target as HTMLInputElement;
     this.ssn = input.value;
@@ -17,15 +23,15 @@ export class PersonFinder extends LitElement {
 
   private async _findPerson() {
     if (!this.ssn) {
-      alert('Please enter an SSN.');
+      this.error = 'Please enter an SSN.';
       return;
     }
     try {
       const person = await getPersonBySsn(this.ssn);
-      alert(`Found Person: ${JSON.stringify(person, null, 2)}`);
+      this.person = person;
     } catch (error) {
       console.error('Error fetching person:', error);
-      alert('Person not found or an error occurred.');
+      this.error = 'Person not found or an error occurred.';
     }
   }
 
@@ -40,6 +46,18 @@ export class PersonFinder extends LitElement {
         />
         <button @click=${this._findPerson}>Find Person</button>
       </div>
+
+      ${this.person
+        ? html`
+            <div id="person-display">
+              <p>Found Person:</p>
+              <pre>${JSON.stringify(this.person, null, 2)}</pre>
+            </div>
+          `
+        : ''}
+      ${this.error
+        ? html`<div id="error-display" role="alert">${this.error}</div>`
+        : ''}
     `;
   }
 }
